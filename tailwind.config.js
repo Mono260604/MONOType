@@ -6,13 +6,26 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+    colors: {
+       bgColor: "#93BAC7",
+       textDark: "#1E242B",
+       textPrimary:"#7598A2",
+       textSecondary:"#C4E3E5",
+       primaryColor: "#EC9E5E",
     },
   },
-  plugins: [],
+  daisyui: {
+    themes: [
+      {
+        ilyTheme: {
+          bgColor: "#93BAC7",
+          textDark: "#1E242B",
+          textPrimary:"#7598A2",
+          textSecondary:"#C4E3E5",
+          primaryColor: "#EC9E5E",
+        },
+      },
+    ],
+  },
+  plugins: [require("daisyui")],
 }
